@@ -1,0 +1,47 @@
+{/* <Table>
+            <TableItem bold>Order ID</TableItem>
+            <TableItem bold>Total Amount</TableItem>
+            <TableItem bold>Address</TableItem>
+            <TableItem bold>Status</TableItem>
+            <TableItem bold>User ID</TableItem>
+            <TableItem bold>Products</TableItem>
+            <TableItem bold>Order Date</TableItem>
+          </Table>
+
+          <Table>
+            <TableItem>{order._id}</TableItem>
+              <TableItem>{order.total_amount}</TableItem>
+              <TableItem>{order.address}</TableItem>
+              <TableItem>{order.status}</TableItem>
+              <TableItem>{order.user}</TableItem>
+              <TableItem>
+                <ul>
+                  {order.products.map((product, index) => (
+                    <li key={index}>
+                      Product ID: {product.product}, Quantity: {product.quantity}
+                    </li>
+                  ))}
+                </ul>
+              </TableItem>
+              <TableItem>{new Date(order.createdAt).toLocaleString()}</TableItem>
+          </Table>
+
+          <Table>
+            <TableItem>4/25/2022</TableItem>
+            <TableItem>1156489</TableItem>
+            <TableItem>	$36.76</TableItem>
+            <TableItem>Order Successful</TableItem>
+          </Table>
+
+          <Table>
+            <TableItem>4/25/2022</TableItem>
+            <TableItem>1156489</TableItem>
+            <TableItem>	$36.76</TableItem>
+            <TableItem>Order Successful</TableItem>
+          </Table> */}
+
+
+
+          1 2 5 9 14
+          1 2 3 4
+          3 4 5
