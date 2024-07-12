@@ -1,5 +1,6 @@
-import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import Button from "../components/Button";
+import { CircularProgress } from '@mui/material';
 import styled from 'styled-components';
 import { getOrders } from '../api';
 
@@ -71,16 +72,23 @@ const Th = styled.th`
 const Td = styled.td`
   text-align: center;
   padding: 0 10px;
+
+  ${({ green }) =>
+    green &&
+    `
+  color: green;
+  `}
 `;
 
-const Ul = styled.ul`
-  padding: 10px;
-`;
 
-const Li = styled.li`
-  list-style-type: none;
-  text-align: left;
-`;
+// const Ul = styled.ul`
+//   padding: 10px;
+// `;
+
+// const Li = styled.li`
+//   list-style-type: none;
+//   text-align: left;
+// `;
 
 const Order = () => {
   const [loading, setLoading] = useState(false);
@@ -117,18 +125,19 @@ const Order = () => {
                   <Th>Total Amount</Th>
                   <Th>Address</Th>
                   <Th>Status</Th>
-                  <Th>User ID</Th>
-                  <Th>Products</Th>
+                  {/* <Th>User ID</Th>
+                  <Th>Products</Th> */}
                   <Th>Order Date</Th>
+                  <Th></Th>
                 </Tr>
 
                 {orders.map(order => (
                   <Tr key={order._id}>
                     <Td>{order._id}</Td>
-                    <Td>{order.total_amount}</Td>
+                    <Td>₹{order.total_amount}</Td>
                     <Td>{order.address}</Td>
-                    <Td>{order.status}</Td>
-                    <Td>{order.user}</Td>
+                    <Td green>{order.status}</Td>
+                    {/* <Td>{order.user}</Td>
                     <Td>
                       <Ul>
                         {order.products.map((product, index) => (
@@ -137,8 +146,9 @@ const Order = () => {
                           </Li>
                         ))}
                       </Ul>
-                    </Td>
+                    </Td> */}
                     <Td>{new Date(order.createdAt).toLocaleString()}</Td>
+                    <Td><Button onClick={()=>{}} verysmall text="Order details"/></Td>
                   </Tr>
                 ))}
               </Table>

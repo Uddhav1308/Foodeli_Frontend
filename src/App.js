@@ -9,9 +9,7 @@ import Favourites from "./pages/Favourites";
 import Cart from "./pages/Cart";
 import FoodDetails from "./pages/FoodDetails";
 import FoodListing from "./pages/FoodListing";
-
 import { useSelector } from "react-redux";
-import Contact from "./pages/Contact";
 import Order from "./pages/Order";
 
 const Container = styled.div``;

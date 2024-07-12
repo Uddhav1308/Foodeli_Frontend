@@ -54,6 +54,14 @@ ${({ small }) =>
     `
 padding: 10px 28px;
 `}
+
+${({ verysmall }) =>
+  verysmall &&
+  `
+padding: 8px 15px;
+box-shadow: none;
+`}
+
   ${({ outlined, theme }) =>
     outlined &&
     `
@@ -77,6 +85,7 @@ const button = ({
   onClick,
   flex,
   small,
+  verysmall,
   outlined,
   full,
 }) => {
@@ -88,6 +97,7 @@ const button = ({
       isLoading={isLoading}
       flex={flex}
       small={small}
+      verysmall={verysmall}
       outlined={outlined}
       full={full}
     >
