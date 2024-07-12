@@ -9,6 +9,7 @@ import { CircularProgress } from '@mui/material';
 
 const Container = styled.div`
   padding: 20px 30px;
+  padding-top: 0;
   padding-bottom: 200px;
   height: 100%;
   overflow-y: scroll;
@@ -24,6 +25,7 @@ const Container = styled.div`
 const Section = styled.div`
   max-width: 1400px;
   padding: 32px 16px;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   gap: 28px;
